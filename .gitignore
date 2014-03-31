@@ -24,3 +24,4 @@ config/secrets.yml
 .rvmrc
 
 config/mongoid.yml
+config/env.yml
