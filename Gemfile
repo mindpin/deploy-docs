@@ -1,6 +1,7 @@
 source "http://ruby.taobao.org"
 
 gem "mongoid", "~> 3.1.6"
+gem 'mongoid-versioning', github: 'simi/mongoid-versioning'
 gem "sinatra"
 gem "sinatra-contrib"
 gem "pry"

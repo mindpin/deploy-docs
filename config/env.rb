@@ -20,3 +20,4 @@ end
 
 require 'net/http'
 require File.expand_path("../../lib/models/user",__FILE__)
+require File.expand_path("../../lib/models/note",__FILE__)

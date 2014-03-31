@@ -7,6 +7,13 @@ GIT
       open4
       rake
 
+GIT
+  remote: git://github.com/simi/mongoid-versioning.git
+  revision: 9b8b772f6835056277e6a8c63ed3d704b0eafd09
+  specs:
+    mongoid-versioning (0.0.1)
+      mongoid (> 3)
+
 GEM
   remote: http://ruby.taobao.org/
   specs:
@@ -99,6 +106,7 @@ DEPENDENCIES
   haml
   mina!
   mongoid (~> 3.1.6)
+  mongoid-versioning!
   pry
   rspec
   sass
