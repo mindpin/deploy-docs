@@ -1,1 +1,6 @@
-INDEX
+.page-note-list
+  .action
+    %a.new{:href => "/notes/new"}新建
+  .list
+    - Note.all.each do |note|
+      %a.note{:href => "/notes/#{note.id}"}= note.title

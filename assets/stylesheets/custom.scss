@@ -1,0 +1,124 @@
+.page-nav{
+  margin-top: 5px;
+  .action{
+    float: right;
+    img.avatar{
+      float: left;
+      height: 30px;
+      width: 30px;
+      display: block;
+    }
+    .name{
+      margin-left: 5px;
+      float: left;
+      line-height: 30px;
+    }
+    .logout{
+      margin-left: 5px;
+      float: left;
+      display: block;
+      line-height: 30px;
+    }
+    &:after {
+      content:"";
+      display:block;
+      clear: both;
+    }
+  }
+  &:after {
+    content:"";
+    display:block;
+    clear: both;
+  }
+}
+
+.page-login{
+  width:300px;
+  margin:auto;
+  padding-top: 300px;
+  .field{
+    margin-top: 6px;
+
+    input[type=text]{
+      padding: 6px;
+      width: 215px;
+      font-size: 16px;
+      border: solid 1px;
+    }
+    input[type=submit]{
+      width:280px;
+      height: 36px;
+      line-height: 36px;
+    }
+  }
+  
+}
+
+.page-note-list{
+  padding-top:50px;
+  .action{
+    a.new{
+      float: right;
+      display: block;
+      width:160px;
+      height: 36px;
+      line-height: 36px;
+      background-color: buttonface;
+      text-align: center;
+    }
+    &:after {
+      content:"";
+      display:block;
+      clear: both;
+    }
+  }
+  .list{
+    a.note{
+      display: block;
+      height: 36px;
+      line-height: 36px;
+      font-weight: bold;
+      font-size: 30px;
+    }
+  }
+}
+
+.page-note-new, .page-note-edit{
+  padding-top:100px;
+  .field{
+    margin-top: 6px;
+    input[type=text]{
+      padding: 6px;
+      width: 900px;
+      font-size: 16px;
+      border: solid 1px;
+    }
+    textarea{
+      padding: 6px;
+      width: 900px;
+      height: 400px;
+      font-size: 16px;
+      border: solid 1px;
+    }
+    input[type=submit]{
+      width:280px;
+      height: 36px;
+      line-height: 36px;
+    }
+  }
+}
+
+.page-note-show{
+  padding-top:100px;
+  .title{
+    width:900px;
+    height: 36px;
+    line-height: 36px;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .content{
+    width:900px;
+    line-height: 36px;
+  }
+}
