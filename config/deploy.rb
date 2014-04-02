@@ -5,7 +5,7 @@ require 'mina/git'
 set :domain, '106.186.119.248'
 set :deploy_to, '/web/deploy-docs'
 set :current_path, 'current'
-set :repository, 'git://github.com/ben7th/deploy-docs.git'
+set :repository, 'git://github.com/mindpin/deploy-docs.git'
 set :branch, 'master'
 set :user, 'root'
 
