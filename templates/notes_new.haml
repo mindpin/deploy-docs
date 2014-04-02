@@ -1,0 +1,11 @@
+.navbar
+  %a{:href=>"/"}首页
+.page-note-new
+  %form{:action => "/notes", :method => "post"}
+    .field
+      %input{:type => "text", :name => "title", :placeholder => "标题"}
+    .field
+      %textarea{:name => "content", :placeholder => "正文"}
+    .field
+      %input{:type => "submit", :value => "创建", :class => "button"}
+      %a{:href=>"/"}取消

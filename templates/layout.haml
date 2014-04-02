@@ -4,5 +4,11 @@
     %title DeployDocs
     = css :application
   %body
+    - if login?
+      .page-nav
+        .action
+          %img.avatar{:src=>self.current_user.avatar}
+          .name=self.current_user.name
+          %a.logout{:href=>"/logout"} 退出登录
     = yield
     = js :application

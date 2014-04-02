@@ -1,0 +1,13 @@
+.navbar
+  %a{:href=>"/"}首页
+  >
+  %a{:href=>"/notes/#{@note.id}"}show
+.page-note-edit
+  %form{:action => "/notes/#{@note.id}", :method => "post"}
+    .field
+      %input{:type => "text", :name => "title", :placeholder => "标题", :value => @note.title}
+    .field
+      %textarea{:name => "content", :placeholder => "正文"}=@note.content
+    .field
+      %input{:type => "submit", :value => "修改", :class => "button"}
+      %a{:href=>"/notes/#{@note.id}"}取消

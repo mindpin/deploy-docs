@@ -1,1 +1,13 @@
-INDEX
+.navbar
+  %a{:href=>"/"}首页
+.page-note-list
+  .action
+    %a.new{:href => "/notes/new"}新建
+  .list
+    - Note.all.each do |note|
+      .note
+        %a.title{:href => "/notes/#{note.id}"}= note.title
+        .info
+          = "#{note.creator.name} 创建于 #{note.created_at}"
+          ,
+          = "#{note.last_editor.name} 最后修改于 #{note.updated_at}"
