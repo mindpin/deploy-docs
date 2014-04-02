@@ -90,6 +90,23 @@ class DeployDocsApp < Sinatra::Base
     redirect "/notes/#{@note.id}"
   end
 
+  delete "/notes/:id/destroy" do
+    @note = Note.find(params[:id])
+    @note.destroy
+    status 200
+  end
+
+  get "/notes/:id/history" do
+    @note = Note.find(params[:id])
+    haml :notes_history
+  end
+
+  get "/notes/:id/versions/:version" do
+    @note = Note.find(params[:id])
+    @version = @note.versions.where(:version => params[:version]).first
+    haml :notes_version
+  end
+
   get "/logout" do
     self.current_user = nil
     redirect "/"

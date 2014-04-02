@@ -1,0 +1,16 @@
+.navbar
+  %a{:href=>"/"}首页
+  >
+  %a{:href=>"/notes/#{@note.id}"}show
+.page-note-history-list
+  .action
+    %a.edit{:href => "/notes/#{@note.id}/edit"}编辑
+    %a.show{:href => "/notes/#{@note.id}"}show
+  .history
+    .title= @note.title
+    .list
+      - @note.versions.reverse.each do |version|
+        .version
+          =version.last_editor.name
+          =version.updated_at
+          %a{:href=>"/notes/#{@note.id}/versions/#{version.version}"}详情

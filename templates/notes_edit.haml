@@ -1,6 +1,8 @@
+.navbar
+  %a{:href=>"/"}首页
+  >
+  %a{:href=>"/notes/#{@note.id}"}show
 .page-note-edit
-  .navbar
-    %a{:href=>"/"}首页
   %form{:action => "/notes/#{@note.id}", :method => "post"}
     .field
       %input{:type => "text", :name => "title", :placeholder => "标题", :value => @note.title}

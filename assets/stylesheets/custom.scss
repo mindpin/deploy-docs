@@ -1,5 +1,14 @@
+.navbar{
+  margin-top: 20px;
+  line-height: 30px;
+  font-size: 20px;
+  a{
+
+  }
+}
 .page-nav{
-  margin-top: 5px;
+  padding-top: 5px;
+  height: 40px;
   .action{
     float: right;
     img.avatar{
@@ -55,7 +64,7 @@
 }
 
 .page-note-list{
-  padding-top:50px;
+  padding-top:20px;
   .action{
     a.new{
       float: right;
@@ -73,18 +82,26 @@
     }
   }
   .list{
-    a.note{
-      display: block;
-      height: 36px;
-      line-height: 36px;
-      font-weight: bold;
-      font-size: 30px;
+    margin: 20px 40px 0 40px;
+    .note{
+      margin: 20px 0 20px 0;
+      a.title{
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .info{
+       line-height: 15px;
+        font-size: 12px; 
+      }
     }
   }
 }
 
 .page-note-new, .page-note-edit{
-  padding-top:100px;
+  padding-top:75px;
   .field{
     margin-top: 6px;
     input[type=text]{
@@ -109,16 +126,109 @@
 }
 
 .page-note-show{
-  padding-top:100px;
-  .title{
-    width:900px;
-    height: 36px;
-    line-height: 36px;
-    font-weight: bold;
-    font-size: 30px;
+  margin-top:20px;
+  .action{
+    a{
+      float: right;
+      display: block;
+      width:160px;
+      height: 36px;
+      line-height: 36px;
+      background-color: buttonface;
+      text-align: center;
+      margin-right: 5px;
+    }
+    &:after {
+      content:"";
+      display:block;
+      clear: both;
+    }
   }
-  .content{
-    width:900px;
-    line-height: 36px;
+  .note{
+    margin:20px 40px 0 40px;
+    .title{
+      width:900px;
+      height: 36px;
+      line-height: 36px;
+      font-weight: bold;
+      font-size: 30px;
+    }
+    .content{
+      margin-top: 20px;
+      width:900px;
+      line-height: 36px;
+    }
+  }
+}
+
+.page-note-history-list{
+  margin-top:20px;
+  .action{
+    a{
+      float: right;
+      display: block;
+      width:160px;
+      height: 36px;
+      line-height: 36px;
+      background-color: buttonface;
+      text-align: center;
+      margin-right: 5px;
+    }
+    &:after {
+      content:"";
+      display:block;
+      clear: both;
+    }
+  }
+
+  .history{
+    margin-top: 20px;
+    .title{
+      font-size: 30px;
+      line-height: 36px;
+    }
+    .list{
+      margin: 20px 40px 0 40px;
+      .version{
+        margin: 20px 0 20px 0;
+      }
+    }
+  }
+
+}
+
+.page-note-version{
+  margin-top:20px;
+  .action{
+    a{
+      float: right;
+      display: block;
+      width:160px;
+      height: 36px;
+      line-height: 36px;
+      background-color: buttonface;
+      text-align: center;
+      margin-right: 5px;
+    }
+    &:after {
+      content:"";
+      display:block;
+      clear: both;
+    }
+  }
+  .note{
+    margin:20px 40px 0 40px;
+    .title{
+      width:900px;
+      height: 36px;
+      line-height: 36px;
+      font-weight: bold;
+      font-size: 30px;
+    }
+    .content{
+      margin-top: 20px;
+      width:900px;
+      line-height: 36px;
+    }
   }
 }
