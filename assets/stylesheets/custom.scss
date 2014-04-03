@@ -48,7 +48,7 @@
   .field{
     margin-top: 6px;
 
-    input[type=text]{
+    input[type=text], input[type=password]{
       padding: 6px;
       width: 215px;
       font-size: 16px;
@@ -109,6 +109,7 @@
       width: 900px;
       font-size: 16px;
       border: solid 1px;
+      font-family: courier, consolas;
     }
     textarea{
       padding: 6px;
@@ -116,6 +117,7 @@
       height: 400px;
       font-size: 16px;
       border: solid 1px;
+      font-family: courier, consolas;
     }
     input[type=submit]{
       width:280px;
@@ -157,6 +159,7 @@
       margin-top: 20px;
       width:900px;
       line-height: 36px;
+      font-family: courier, consolas;
     }
   }
 }
@@ -229,6 +232,7 @@
       margin-top: 20px;
       width:900px;
       line-height: 36px;
+      font-family: courier, consolas;
     }
   }
 }
