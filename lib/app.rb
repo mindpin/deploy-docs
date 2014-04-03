@@ -10,6 +10,7 @@ class DeployDocsApp < Sinatra::Base
   register Sinatra::AssetPack
   enable :sessions
   helpers AuthHelper
+  helpers ActionView::Helpers::TextHelper
 
   assets {
     serve '/js', :from => 'assets/javascripts'

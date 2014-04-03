@@ -5,4 +5,4 @@
     %a.history{:href => "/notes/#{@note.id}/history"}历史版本
   .note
     .title= @version.title
-    %pre.content= @version.content
+    .content= simple_format @version.content
