@@ -7,4 +7,5 @@
     %a.history{:href => "/notes/#{@note.id}/history"}历史版本
   .note
     .title= @note.title
-    .content= simple_format @note.content
+    .content= preserve {@note.markdown_content}
+      

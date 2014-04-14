@@ -22,3 +22,7 @@ group :test do
   gem "rspec"
   gem "database_cleaner", "~> 1.2.0"
 end
+
+
+gem 'redcarpet', '~> 3.1.1'
+gem 'coderay', '~> 1.1.0'
