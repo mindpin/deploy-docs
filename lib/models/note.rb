@@ -24,7 +24,34 @@ class Note
     User.where(:user_id => creator_id).first
   end
 
+  def markdown_content
+    options = {   
+        :autolink => true, 
+        :space_after_headers => true,
+        :fenced_code_blocks => true,
+        :no_intra_emphasis => true,
+        :hard_wrap => false,
+        :strikethrough =>true
+      }
+    markdown = Redcarpet::Markdown.new(HTMLwithCodeRay,options)
+    markdown.render(content).html_safe
+  end
+
   before_create do |note|
     note.last_editor = note.creator
+  end
+
+  class HTMLwithCodeRay < Redcarpet::Render::HTML
+    def block_code(code, language)
+      return code if code.blank?
+      return _normal_block(code)  if language.blank?
+      CodeRay.scan(code, language).div(:tab_width=>2, :css => :class)
+    end
+
+    def _normal_block(code)
+      # 去掉结尾的回车
+      code = code.gsub(/(\r?\n)+\z/,"")
+      %`<div class="CodeRay"><br/><div class="code"><pre>#{code}</pre></div><br/></div>`
+    end
   end
 end
