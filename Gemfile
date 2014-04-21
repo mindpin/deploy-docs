@@ -26,4 +26,4 @@ end
 
 gem 'redcarpet', '~> 3.1.1'
 gem 'coderay', '~> 1.1.0'
-gem "mde-4ye", :github => "kaid/mde-4ye"
+gem "mde-4ye", :github => "kaid/mde-4ye", :tag => "v0.0.1"

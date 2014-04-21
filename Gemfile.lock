@@ -9,7 +9,8 @@ GIT
 
 GIT
   remote: git://github.com/kaid/mde-4ye.git
-  revision: 034ab47019a635f6e3e17eb45b3f8e0958f706ed
+  revision: 539c7ab8726dae3ba1686b8b39ade7ca3022c2d4
+  tag: v0.0.1
   specs:
     mde-4ye (0.0.1)
       sinatra-assetpack
