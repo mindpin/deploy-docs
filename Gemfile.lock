@@ -9,11 +9,12 @@ GIT
 
 GIT
   remote: git://github.com/kaid/mde-4ye.git
-  revision: 539c7ab8726dae3ba1686b8b39ade7ca3022c2d4
+  revision: 96af6766400818d2f99788fa0c5ed54f6b2fbba0
   tag: v0.0.1
   specs:
     mde-4ye (0.0.1)
-      sinatra-assetpack
+      haml
+      sinatra
 
 GIT
   remote: git://github.com/simi/mongoid-versioning.git
@@ -82,7 +83,7 @@ GEM
     rack-test (0.6.2)
       rack (>= 1.0)
     raindrops (0.13.0)
-    rake (10.2.2)
+    rake (10.3.1)
     redcarpet (3.1.1)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
@@ -92,7 +93,7 @@ GEM
     rspec-expectations (2.14.5)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.14.6)
-    sass (3.3.4)
+    sass (3.3.5)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
