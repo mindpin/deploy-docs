@@ -8,6 +8,13 @@ GIT
       rake
 
 GIT
+  remote: git://github.com/kaid/mde-4ye.git
+  revision: 034ab47019a635f6e3e17eb45b3f8e0958f706ed
+  specs:
+    mde-4ye (0.0.1)
+      sinatra-assetpack
+
+GIT
   remote: git://github.com/simi/mongoid-versioning.git
   revision: 9b8b772f6835056277e6a8c63ed3d704b0eafd09
   specs:
@@ -69,7 +76,7 @@ GEM
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
-    rack-protection (1.5.2)
+    rack-protection (1.5.3)
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -85,7 +92,7 @@ GEM
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.14.6)
     sass (3.3.4)
-    sinatra (1.4.4)
+    sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
@@ -127,6 +134,7 @@ DEPENDENCIES
   coffee-script
   database_cleaner (~> 1.2.0)
   haml
+  mde-4ye!
   mina!
   mongoid (~> 3.1.6)
   mongoid-versioning!

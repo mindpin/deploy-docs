@@ -7,7 +7,7 @@
     .field
       %input{:type => "text", :name => "title", :placeholder => "标题", :value => @note.title}
     .field
-      %textarea{:name => "content", :placeholder => "正文"}=@note.content
+      =mdeditor("content", @note.content)
     .field
       %input{:type => "submit", :value => "修改", :class => "button"}
       %a{:href=>"/notes/#{@note.id}"}取消
