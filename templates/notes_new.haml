@@ -5,7 +5,7 @@
     .field
       %input{:type => "text", :name => "title", :placeholder => "标题"}
     .field
-      %textarea{:name => "content", :placeholder => "正文"}
+      =mdeditor("content", "")
     .field
       %input{:type => "submit", :value => "创建", :class => "button"}
       %a{:href=>"/"}取消
