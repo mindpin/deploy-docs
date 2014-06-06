@@ -1,6 +1,8 @@
 require File.expand_path("../../config/env",__FILE__)
 
 class DeployDocsApp < Sinatra::Base
+  include DocumentsStore
+
   configure :development do
     register Sinatra::Reloader
   end
@@ -10,7 +12,6 @@ class DeployDocsApp < Sinatra::Base
   register Sinatra::AssetPack
   enable :sessions
   helpers AuthHelper
-  helpers ActionView::Helpers::TextHelper
 
   assets {
     serve '/js', :from => 'assets/javascripts'
@@ -41,6 +42,7 @@ class DeployDocsApp < Sinatra::Base
     if !login?
       return haml :login
     end
+    @notes = DocumentsStore::Document.all
     haml :index
   end
 
@@ -63,23 +65,23 @@ class DeployDocsApp < Sinatra::Base
     title = params["title"]
     content = params["content"]
     return haml :notes_new if title.blank? || content.blank?
-    note = Note.create(:title => title, :content => content, :creator => current_user)
+    note = Document.create(:title => title, :content => content, :creator => current_user)
     return haml :notes_new if note.id.blank?
     redirect "/notes/#{note.id}"
   end
 
   get "/notes/:id" do
-    @note = Note.find(params[:id])
+    @note = Document.find(params[:id])
     haml :notes_show
   end
 
   get "/notes/:id/edit" do
-    @note = Note.find(params[:id])
+    @note = Document.find(params[:id])
     haml :notes_edit
   end
 
   post "/notes/:id" do
-    @note = Note.find(params[:id])
+    @note = Document.find(params[:id])
     title = params["title"]
     content = params["content"]
     return haml :notes_edit if title.blank? || content.blank?
@@ -92,18 +94,18 @@ class DeployDocsApp < Sinatra::Base
   end
 
   delete "/notes/:id/destroy" do
-    @note = Note.find(params[:id])
+    @note = Document.find(params[:id])
     @note.destroy
     status 200
   end
 
   get "/notes/:id/history" do
-    @note = Note.find(params[:id])
+    @note = Document.find(params[:id])
     haml :notes_history
   end
 
   get "/notes/:id/versions/:version" do
-    @note = Note.find(params[:id])
+    @note = Document.find(params[:id])
     @version = @note.versions.where(:version => params[:version]).first
     haml :notes_version
   end
