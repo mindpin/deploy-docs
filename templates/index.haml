@@ -4,7 +4,7 @@
   .action
     %a.new{:href => "/notes/new"}新建
   .list
-    - Note.all.each do |note|
+    - @notes.each do |note|
       .note
         %a.title{:href => "/notes/#{note.id}"}= note.title
         .info

@@ -1,7 +1,6 @@
 source "http://ruby.taobao.org"
 
-gem "mongoid", "~> 3.1.6"
-gem 'mongoid-versioning', github: 'simi/mongoid-versioning'
+gem "mongoid", "~> 4.0.0.rc1"
 gem "sinatra"
 gem "sinatra-contrib"
 gem "pry"
@@ -12,7 +11,8 @@ gem 'sass'
 gem 'coffee-script'
 gem 'yui-compressor'
 gem 'uglifier'
-gem 'actionpack', '3.2.12'
+gem "mongoid-versioning", :github => "simi/mongoid-versioning"
+gem "documents-store",    :github => "mindpin/documents-store"
 
 gem 'mina',
     :git => 'git://github.com/fushang318/mina.git',

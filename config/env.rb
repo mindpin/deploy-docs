@@ -10,6 +10,8 @@ require 'coffee_script'
 require 'yui/compressor'
 require 'sinatra/json'
 require 'mongoid'
+require "mongoid-versioning"
+require "documents-store"
 Mongoid.load!("./config/mongoid.yml")
 
 ENV_YAML = YAML.load_file("config/env.yml")
@@ -19,9 +21,8 @@ class R
 end
 
 require 'net/http'
-require 'action_view'
 require 'redcarpet'
 require 'pygments'
 require File.expand_path("../../lib/models/user",__FILE__)
-require File.expand_path("../../lib/models/note",__FILE__)
+require File.expand_path("../../lib/models/document",__FILE__)
 require File.expand_path("../../lib/helpers/auth_helper",__FILE__)
