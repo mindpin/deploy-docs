@@ -16,8 +16,7 @@ Mongoid.load!("./config/mongoid.yml")
 
 ENV_YAML = YAML.load_file("config/env.yml")
 class R
-  USER_EMAILS = ENV_YAML['user_emails']
-  AUTH_URL    = ENV_YAML['auth_url']
+  USERS = ENV_YAML['users']
 end
 
 require 'net/http'

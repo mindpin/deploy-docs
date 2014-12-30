@@ -8,17 +8,14 @@ class User
   field :user_id, :type => String
 
   def self.authenticate(email, password)
-    return if !R::USER_EMAILS.include?(email)
-
-    params = {
-      "user[login]"    => email,
-      "user[password]" => password
-    }
-    uri = URI.parse(R::AUTH_URL)
-    res = Net::HTTP.post_form(uri, params)
-    return if res.code != "200"
-    info = JSON.parse(res.body)
-    User._create_or_update_by_info(info)
+    R::USERS.each do |user_attr|
+      if user_attr["email"] == email
+        if !password.blank? && user_attr["password"] == password
+          return User._create_or_update_by_info(user_attr)
+        end
+      end
+    end
+    return nil
   end
 
   def self._create_or_update_by_info(info)
